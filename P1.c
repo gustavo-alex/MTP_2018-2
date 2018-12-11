@@ -1,19 +1,49 @@
 / * P1.c * /
 / * Gustavo Alexande P. dos S. Sousa * /
 / * 11711EEL005 * /
-# include < stdio.h >
-
-int  main () {
-	int est = 0 , i;
-	bits de char [ 256 ];
-	scanf ( " % s " , bits);
-	para (i = 0 ; bits [i]; i ++) {
-		if (est == 0 && bits [i] == ' 1 ' ) est = 1 ;
-		else  if (est == 1 ) {
-			est = (bits [i] == ' 0 ' )? 2 : 0 ;
+//Miguel Ravagnani de Carvalho
+//11721EEL019
+#include <stdio.h>
+int main()
+{
+	int est=0, i=0, j=0;
+	char bits[256];
+	while (j>=0)
+	{
+		j=0;
+		printf("Insira um numero valido para que seja determinado se este e multiplo 3: ");
+	    scanf("%s", bits);
+	    for (i=0; bits[i]!='\0'; i++)
+	    {
+	    	if (bits[i]!='0' && bits[i]!='1')
+	    	j++;
 		}
-		else  if (est == 2 && bits [i] == ' 0 ' ) est = 1 ;
+		j--;
 	}
-	printf ( " \" % s \ "  % s " , bits, est == 0 ? " e multiplo de 3 \ n " : " nao e \ n " );
-	return  0 ;
+	for (i=0; bits[i]!='\0'; i++)
+	{
+		if (bits[i]=='0')
+		{
+			if (est==0)
+				est=0;
+			else if (est==2)
+			    est=1;
+			else
+			    est=2;
+		}
+		else if (bits[i]=='1')
+		{
+			if (est==2)
+			    est=2;
+			else if (est==0)
+			    est=1;
+			else
+			    est=0;
+		}
+	}
+	if (est==0)
+	    printf("\n%s e um multiplo de 3", bits);
+	else
+	    printf("\n%s nao um multiplo de 3", bits);
+	return 0;
 }

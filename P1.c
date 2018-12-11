@@ -1,8 +1,6 @@
 / * P1.c * /
 / * Gustavo Alexande P. dos S. Sousa * /
 / * 11711EEL005 * /
-//Miguel Ravagnani de Carvalho
-//11721EEL019
 #include <stdio.h>
 int main()
 {

@@ -1,6 +1,6 @@
-/ * P2.c * /
-/ * Gustavo Alexander P. dos S. Sousa * /
-/ * 11711EEL005 * /
+//  P2.c 
+//  Gustavo Alexander P. dos S. Sousa 
+//  11711EEL005 
 #include <stdio.h>
 
 void preenche(char bits[])

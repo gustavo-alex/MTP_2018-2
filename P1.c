@@ -1,6 +1,6 @@
-/ * P1.c * /
-/ * Gustavo Alexande P. dos S. Sousa * /
-/ * 11711EEL005 * /
+//  P1.c
+// Gustavo Alexander P. dos S. Sousa
+// 11711EEL005 
 #include <stdio.h>
 int main()
 {

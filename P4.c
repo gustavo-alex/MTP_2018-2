@@ -1,20 +1,56 @@
-/ * P4.c * /
-/ * Gustavo Alexander P. dos S. Sousa * /
-/ * 11711EEL005 * /
+//P4.c
+//Gustavo Alexander P. dos S. Sousa
+//11711EEL005
 
 #include <stdio.h>
-int main()
+
+int ackermann_function(int m, int n)
+
 {
-	int conv=0, cum=0, i=0;
-	char numero[256];
-	scanf("%s", numero);
-	getchar();
-	for (i=0; numero[i]; i++)
-	{
-		if ((numero[i]-'0')>=0 && (numero[i]-'0')<=9)
-			cum=cum*10+(numero[i]-'0');
-		else;
+	
+    if (m == 0)
+
+	{	
+
+		return n+1;	
+
 	}
-	printf("%i", cum);
+
+	else if (m > 0 && n == 0)
+
+	{
+
+		return ackermann_function(m-1,1);	
+
+	}
+
+	else
+
+	{
+		return ackermann_function(m-1, ackermann_function(m,n-1));	
+
+	}
+
+}
+
+
+
+int main()
+
+{
+
+	int m, n;
+
+	printf("\nDigite m: ");
+
+	scanf("%d", &m);
+
+	printf("\nDigite n: ");
+
+	scanf("%d", &n);
+
+	printf("\nO resultado da funcao eh: %d", ackermann_function(m,n));
+
 	return 0;
+
 }

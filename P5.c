@@ -1,6 +1,6 @@
-/ * P5.c * /
-/ * Gustavo Alexander P. dos S. Sousa * /
-/ * 11711EEL005 * /
+//P5.c
+//Gustavo Alexander P. dos S. Sousa 
+// 11711EEL005 
 
 # include  < stdio.h >
 # define  N  50
